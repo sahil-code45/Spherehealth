@@ -20,13 +20,12 @@ const bedSchema = new mongoose.Schema(
     },
 
     hourlyCharge: { type: Number, default: 0 },
-    transfer:{String},
-    TotalCharge:{type:Number, default: 0 },
+    transfer: { String },
+    TotalCharge: { type: Number, default: 0 },
 
     // ✅ ADD THIS FIELD
     patientUHID: { type: String, default: null },
-    startingTime: { type: Date, default: null },                                                       
-
+    startingTime: { type: Date, default: null },
   },
   { timestamps: true }
 );

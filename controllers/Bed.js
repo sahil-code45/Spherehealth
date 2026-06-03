@@ -110,7 +110,7 @@ exports.bedcharges = async (req, res) => {
     const { bedId } = req.params;
 
     const bed = await Bed.findById(bedId);
-if (!bed) return res.status(404).json({ message: "Bed not found" });
+    if (!bed) return res.status(404).json({ message: "Bed not found" });
 
     res.json({ hourlyCharge: bed.hourlyCharge });
   } catch (err) {

@@ -13,10 +13,12 @@
 // routes/wardCharges.js
 const express = require("express");
 const router = express.Router();
-const { setWardCharges, getWardCharges } = require('../controllers/WardCharges');
+const { setWardCharges, getWardCharges,getWardChargesByCategory } = require('../controllers/WardCharges');
 
 // Note: router paths are relative to where we mount this router in app.js
 router.post('/', setWardCharges);   // will become POST /api/ward-charges
-router.get('/', getWardCharges);    // will become GET  /api/ward-charges
+router.get('/', getWardCharges);    // will become GET  /api/ward-category in dropdown....
+router.get('/getWardChargesByCategory/:_id',getWardChargesByCategory)
+
 
 module.exports = router;

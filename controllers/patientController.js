@@ -52,6 +52,8 @@ exports.getPatient = async (req, res) => {
 exports.getPatientbyID = async (req, res) => {
    try {
      const patient = await Patient.findOne({ UHID: req.params.UHID });
+     console.log("========",patient);
+     
      if (!patient) return res.status(404).json({ msg: "Patient not found" });
      res.json(patient);
    } catch (err) {

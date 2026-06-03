@@ -74,7 +74,7 @@ const doctorSchema = new mongoose.Schema({
   Restraints: String,
   RestraintsSelected: String,
   ChemicalComment: String,
-  Investigation: String,  
+  Investigation: String,
   Treatment_input: String,
   Diet: String,
   Hemiparesis: String,
